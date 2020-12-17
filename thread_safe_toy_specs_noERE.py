@@ -1,5 +1,4 @@
 from pythonrv import rv
-import init_machine_inc
 import testmod
 
 lockflag = False

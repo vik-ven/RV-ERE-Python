@@ -4,7 +4,6 @@ import threading
 import logging
 import time
 
-import init_machine_inc
 from pythonrv import rv
 rv.configure(error_handler=rv.LoggingErrorHandler())
 logging.basicConfig(filename="log",
@@ -53,12 +52,12 @@ def sfw_function():
 def main():
     start_time = time.time()
     #initmachine needs to be called to initialize global state machine. This needs to happen at some point
-    init_machine_inc.initmachine()
-    #init_machine_inc.statemachine.fsm.printOut()
+    thread_safe_specs.initmachine()
+    thread_safe_specs.statemachine.fsm.printOut()
     global i
     nsfw_function()
     i = 0
-    init_machine_inc.statemachine.reset_state()
+    thread_safe_specs.statemachine.reset_state()
     sfw_function()
     print("--- %s seconds ---" %(time.time() - start_time))
 if __name__ == '__main__':
