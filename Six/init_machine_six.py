@@ -1,4 +1,4 @@
-from pythonrvERE.EREParser import EREMachine
+from EREMachine.EREParser import EREMachine
 
 global statemachine
 
