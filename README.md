@@ -10,4 +10,7 @@ Instructions for running the code artifacts in this repo:
 
 Instructions for running the Six testing:
 1. Download the git repo for six from here: https://github.com/benjaminp/six
-2. In the six folder, add both the folder for EREMachine
+2. In the newly cloned six folder, drop in the folder for EREMachine from this git repo
+3. Also add six_specs and init_machine_six
+4. You can either use the version of six_tests I have in this repo, or if you would like to use the current version, paste in the imports from this test version and also the first two tests involving the init_machine functions, as calling them sets up the statemachine
+5. Run the tests normally in pytests
